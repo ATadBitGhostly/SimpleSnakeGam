@@ -112,6 +112,8 @@ void Logic() {
     }
     if (playerX == fruitX && playerY == fruitY) {
         score += 10;
+        fruitX = rand() % width;
+        fruitY = rand() % height;
     }
 }
 
