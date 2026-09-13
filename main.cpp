@@ -110,6 +110,9 @@ void Logic() {
     if (playerX > width || playerY > height || playerX < 0 || playerY < 0) {
         gameOver = true;
     }
+    if (playerX == fruitX && playerY == fruitY) {
+        score += 10;
+    }
 }
 
 
@@ -120,8 +123,9 @@ int main() {
         Input();
         Logic();
         Sleep(50);
-        cout << playerX << endl;
-        cout << playerY << endl;
+        // cout << playerX << endl;
+        // cout << playerY << endl;
+        cout << "Score: " << score << endl;
     }
 
 }
