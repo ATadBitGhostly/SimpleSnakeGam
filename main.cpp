@@ -35,14 +35,14 @@ void Draw() {
 
     system("cls"); // system clear in the console window
     for (int i = 0; i < width; i++) {
-        cout << "#";
+        cout << "-";
     }
     cout << endl;
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (j == 0) {
-                cout << "#";
+                cout << "(";
             }
 
             if (i == playerY && j == playerX) {
@@ -61,14 +61,14 @@ void Draw() {
             }
 
             if (j == width - 1) {
-                cout << "#";
+                cout << ")";
             }
         }
         cout << endl;
     }
 
     for (int i = 0; i < height; i++) {
-        cout << "#";
+        cout << "-";
     }
     cout << endl;
 
