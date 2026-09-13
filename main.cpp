@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 // Game Behaviour
 bool gameOver;
@@ -31,28 +31,35 @@ void Draw() {
 
     system("cls"); // system clear in the console window
     for (int i = 0; i < width; i++) {
-        std::cout << "#";
+        cout << "#";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (j == 0) {
-                std::cout << "#";
-            } else {
-                std::cout << " ";
+                cout << "#";
             }
+
+            if (i == playerY && j == playerX) {
+                cout << "0";
+            } else if (i == fruitY && j == fruitX) {
+                cout << "F";
+            } else {
+                cout << " ";
+            }
+
             if (j == width - 1) {
-                std::cout << "#";
+                cout << "#";
             }
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     for (int i = 0; i < height; i++) {
-        std::cout << "#";
+        cout << "#";
     }
-    std::cout << std::endl;
+    cout << endl;
 
 }
 
@@ -66,8 +73,9 @@ void Logic() {
 
 int main() {
 
+    Setup();
     Draw();
     Input();
     Logic();
-
+ 
 }
