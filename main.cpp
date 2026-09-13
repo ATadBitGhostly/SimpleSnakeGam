@@ -1,4 +1,6 @@
 #include <iostream>
+#include <conio.h>
+#include <windows.h>
 using namespace std;
 
 // Game Behaviour
@@ -10,7 +12,7 @@ const int width = 20;
 
 // Player
 int playerX, playerY, score;
-enum eDIRECTION { UP, DOWN, LEFT, RIGHT, STOP = 0 };
+enum eDIRECTION { STOP = 0, UP, DOWN, LEFT, RIGHT};
 eDIRECTION dir;
 
 // Fruit
@@ -65,17 +67,57 @@ void Draw() {
 
 void Input() {
 
+    if (_kbhit()) {
+        switch (_getch()) {
+            case 'a':
+                dir = LEFT;
+                break;
+            case 'd':
+                dir = RIGHT;
+                break;
+            case 'w':
+                dir = UP;
+                break;
+            case 's':
+                dir = DOWN;
+                break;
+            case 'x':
+                gameOver = true;
+                break;
+        }
+    }
+
 }
 
 void Logic() {
 
+    switch (dir) {
+        case LEFT:
+            playerX--;
+            break;
+        case RIGHT:
+            playerX++;
+            break;
+        case UP:
+            playerY--;
+            break;
+        case DOWN:
+            playerY++;
+            break;
+        default:
+            break;
+    }
+
 }
 
-int main() {
 
+int main() {
     Setup();
-    Draw();
-    Input();
-    Logic();
- 
+    while (gameOver == false) {
+        Draw();
+        Input();
+        Logic();
+        Sleep(100);
+    }
+
 }
