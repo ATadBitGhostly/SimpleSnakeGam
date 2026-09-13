@@ -107,7 +107,9 @@ void Logic() {
         default:
             break;
     }
-
+    if (playerX > width || playerY > height || playerX < 0 || playerY < 0) {
+        gameOver = true;
+    }
 }
 
 
@@ -117,7 +119,9 @@ int main() {
         Draw();
         Input();
         Logic();
-        Sleep(100);
+        Sleep(50);
+        cout << playerX << endl;
+        cout << playerY << endl;
     }
 
 }
