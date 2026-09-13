@@ -11,12 +11,14 @@ const int height = 20;
 const int width = 20;
 
 // Player
-int playerX, playerY, score;
-enum eDIRECTION { STOP = 0, UP, DOWN, LEFT, RIGHT};
-eDIRECTION dir;
+int playerX, playerY, score; // Player head coords and score initialization
+int tailX[100], tailY[100];
+int nTail; // checks collision?
+enum eDIRECTION { STOP = 0, UP, DOWN, LEFT, RIGHT}; // directions
+eDIRECTION dir; // keeps tabs on direction
 
 // Fruit
-int fruitX, fruitY;
+int fruitX, fruitY; // Fruit coords initialization
 
 void Setup() {
 
@@ -48,7 +50,14 @@ void Draw() {
             } else if (i == fruitY && j == fruitX) {
                 cout << "F";
             } else {
-                cout << " ";
+                bool print = false;
+                for (int k = 0; k < nTail; k++) {
+                    if (tailX[k] == j && tailY[k] == i) {
+                        cout << "o";
+                        print = true;
+                    }
+                }
+                if (!print) cout << " ";
             }
 
             if (j == width - 1) {
@@ -91,6 +100,20 @@ void Input() {
 
 void Logic() {
 
+    int prevX = tailX[0];
+    int prevY = tailY[0];
+    int prev2X, prev2Y;
+
+    tailX[0] = playerX;
+    tailY[0] = playerY;
+    for (int i = 1; i < nTail; i++) {
+        prev2X = tailX[i];
+        prev2Y = tailY[i];
+        tailX[i] = prevX;
+        tailY[i] = prevY;
+        prevX = prev2X;
+        prevY = prev2Y;
+    }
     switch (dir) {
         case LEFT:
             playerX--;
@@ -114,6 +137,7 @@ void Logic() {
         score += 10;
         fruitX = rand() % width;
         fruitY = rand() % height;
+        nTail++;
     }
 }
 
