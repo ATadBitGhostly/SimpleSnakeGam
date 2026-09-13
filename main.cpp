@@ -130,9 +130,11 @@ void Logic() {
         default:
             break;
     }
-    if (playerX > width || playerY > height || playerX < 0 || playerY < 0) {
-        gameOver = true;
-    }
+    // if (playerX > width || playerY > height || playerX < 0 || playerY < 0) {
+    //     gameOver = true;
+    // }
+    if (playerX >= width) playerX = 0; else if (playerX < 0) playerX = width - 1;
+    if (playerY >= height) playerY = 0; else if (playerY < 0) playerY = height - 1;
     for (int i = 0; i < nTail; i++) {
         if (tailX[i] == playerX && tailY[i] == playerY) {
             gameOver = true;
