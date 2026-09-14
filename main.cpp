@@ -166,17 +166,21 @@ void Logic() {
     }
 }
 
-
+// Main function which initializes the other functions
 int main() {
+    // Sets up all the necessary variables before game starts
     Setup();
+    // A while loop that keeps looping till gameOver becomes true
     while (gameOver == false) {
+        // calls out Draw(), Input() and Logic() functions
         Draw();
         Input();
         Logic();
-        Sleep(50);
+        Sleep(50); // a wait function per se, that allows for more time for players
+        // 2 outputs for player coordinates.
         // cout << playerX << endl;
         // cout << playerY << endl;
-        cout << "Score: " << score << endl;
+        cout << "Score: " << score << endl; // Score display
     }
 
 }
