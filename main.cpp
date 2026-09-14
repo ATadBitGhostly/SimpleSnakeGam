@@ -104,22 +104,30 @@ void Input() {
 
 }
 
+// Function that does all the logic
 void Logic() {
 
+    // Declares prevX and prevY and saves the tails previous positions, also declares prev2X and prev2Y
     int prevX = tailX[0];
     int prevY = tailY[0];
     int prev2X, prev2Y;
 
+    // sets the tails starting position on players X and Y coords
     tailX[0] = playerX;
     tailY[0] = playerY;
+    // A for loop that goes through each tail the player has and moves them to previous segments
     for (int i = 1; i < nTail; i++) {
+        // Saves the current tail segments position before overwriting it.
         prev2X = tailX[i];
         prev2Y = tailY[i];
+        // Saves the current tail segment on the previous x and y coords
         tailX[i] = prevX;
         tailY[i] = prevY;
+        // saves the previous x and y to be the 2x previous ones.
         prevX = prev2X;
         prevY = prev2Y;
     }
+    // This is basically the same thing in input, but just changes the values of the player
     switch (dir) {
         case LEFT:
             playerX--;
@@ -136,16 +144,20 @@ void Logic() {
         default:
             break;
     }
+    // This if is just to enable wall collision logic
     // if (playerX > width || playerY > height || playerX < 0 || playerY < 0) {
     //     gameOver = true;
     // }
+    // These 2 ifs just make the walls become portals to the other side.
     if (playerX >= width) playerX = 0; else if (playerX < 0) playerX = width - 1;
     if (playerY >= height) playerY = 0; else if (playerY < 0) playerY = height - 1;
+    // for loop checks if the player head collides with the body/tails
     for (int i = 0; i < nTail; i++) {
         if (tailX[i] == playerX && tailY[i] == playerY) {
             gameOver = true;
         }
     }
+    // logic for tail and score increase when player touches the fruits
     if (playerX == fruitX && playerY == fruitY) {
         score += 10;
         fruitX = rand() % width;
