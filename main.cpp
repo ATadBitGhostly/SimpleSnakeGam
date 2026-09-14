@@ -14,20 +14,21 @@ const int width = 20;
 int playerX, playerY, score; // Player head coords and score initialization
 int tailX[100], tailY[100];
 int nTail; // checks collision?
-enum eDIRECTION { STOP = 0, UP, DOWN, LEFT, RIGHT}; // directions
+enum eDIRECTION { STOP = 0, UP, DOWN, LEFT, RIGHT}; // directions or states
 eDIRECTION dir; // keeps tabs on direction
 
 // Fruit
 int fruitX, fruitY; // Fruit coords initialization
 
+// First thing that happens when program starts
 void Setup() {
 
-    gameOver = false;
-    dir = STOP;
-    playerX = width / 2;
-    playerY = height / 2;
-    fruitX = rand() % width;
-    fruitY = rand() % height;
+    gameOver = false; // Sets that the game is not over, who could have guessed
+    dir = STOP; // For eDirection enum "dir" array to know what state it should be in.
+    playerX = width / 2; // Basically sets the players X coord to be in the middle
+    playerY = height / 2; // Same here but on the Y coord
+    fruitX = rand() % width; // Sets the fruit X coord location by getting a random number dividing it by width and getting the remainder
+    fruitY = rand() % height; // Same here except for the fruits Y coord and height
 
 }
 
