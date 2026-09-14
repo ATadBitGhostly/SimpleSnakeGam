@@ -78,23 +78,25 @@ void Draw() {
 
 }
 
+// Function that Checks the inputs entered
 void Input() {
 
+    // an if that checks if the keyboard has been... touched
     if (_kbhit()) {
-        switch (_getch()) {
-            case 'a':
+        switch (_getch()) { // gets the key
+            case 'a': // if it is the 'a' key then dir becomes Left
                 dir = LEFT;
                 break;
-            case 'd':
+            case 'd': // if it is the 'd' key then dir becomes Right
                 dir = RIGHT;
                 break;
-            case 'w':
+            case 'w': // if it is the 'w' key then dir becomes Up
                 dir = UP;
                 break;
-            case 's':
+            case 's': // if it is the 's' key then dir becomes Down
                 dir = DOWN;
                 break;
-            case 'x':
+            case 'x': // if the 'x' key is pressed the gameOver state turns true and ends the program.
                 gameOver = true;
                 break;
         }
