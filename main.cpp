@@ -32,25 +32,28 @@ void Setup() {
 
 }
 
+// Function that draws the game like, borders/portals, player, etc.
 void Draw() {
 
     system("cls"); // system clear in the console window
+    // a for loop for top wall/portal
     for (int i = 0; i < width; i++) {
         cout << "-";
     }
     cout << endl;
 
+    // a big for loop for side walls, and player and fruit location
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (j == 0) {
                 cout << "(";
             }
-
+            // Ifs that check if the player coords or fruit coords match the iteration and renders the player or fruit
             if (i == playerY && j == playerX) {
                 cout << "0";
             } else if (i == fruitY && j == fruitX) {
                 cout << "F";
-            } else {
+            } else { // an else option which renders the tail of the player when it increases
                 bool print = false;
                 for (int k = 0; k < nTail; k++) {
                     if (tailX[k] == j && tailY[k] == i) {
@@ -58,7 +61,7 @@ void Draw() {
                         print = true;
                     }
                 }
-                if (!print) cout << " ";
+                if (!print) cout << " "; // if the print is false it just doesnt print out the tail
             }
 
             if (j == width - 1) {
@@ -67,7 +70,7 @@ void Draw() {
         }
         cout << endl;
     }
-
+    // for loop for the bottom wall/portal
     for (int i = 0; i < height; i++) {
         cout << "-";
     }
