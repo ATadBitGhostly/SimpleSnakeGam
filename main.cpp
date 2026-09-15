@@ -7,13 +7,11 @@
 
 int main() {
 
-    InitWindow(800, 600, "SNAKE GAME");
-    SetTargetFPS(60);  // <-- THIS WAS MISSING!
+    InitWindow(600, 400, "SNAKE GAME");
 
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawText("Hello!", 100, 100, 20, WHITE);
         EndDrawing();
     }
 
