@@ -6,17 +6,26 @@
 #include "raylib.h"
 
 int main() {
-    InitWindow(800, 600, "Snake Game");
-    SetTargetFPS(60);
 
+    // init app
+    InitWindow(600, 400, "SNAKE GAME");
+
+    // run app
     while (!WindowShouldClose()) {
+
         BeginDrawing();
-        ClearBackground(BLACK);
-        DrawText("Hello!", 300, 250, 40, GREEN);
+        // between these 2 there is drawing happening
+
+        ClearBackground(GREEN);
+        DrawText("Hello!", 100, 100, 20, BLACK);
+
         EndDrawing();
     }
 
+
+    // close app
     CloseWindow();
+
     return 0;
 }
 
