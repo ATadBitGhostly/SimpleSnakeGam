@@ -1,31 +1,23 @@
-// #include <iostream>
+#include <iostream>
 // #include <conio.h>
 // #include <windows.h>
 // using namespace std;
 
-#include "raylib.h"
+#include <raylib.h>
 
 int main() {
 
-    // init app
-    InitWindow(600, 400, "SNAKE GAME");
+    InitWindow(800, 600, "SNAKE GAME");
+    SetTargetFPS(60);  // <-- THIS WAS MISSING!
 
-    // run app
     while (!WindowShouldClose()) {
-
         BeginDrawing();
-        // between these 2 there is drawing happening
-
-        ClearBackground(GREEN);
-        DrawText("Hello!", 100, 100, 20, BLACK);
-
+        ClearBackground(BLACK);
+        DrawText("Hello!", 100, 100, 20, WHITE);
         EndDrawing();
     }
 
-
-    // close app
     CloseWindow();
-
     return 0;
 }
 
