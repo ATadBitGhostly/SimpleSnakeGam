@@ -28,6 +28,9 @@ int main() {
 // Then i wanted to keep using clion ide and i checked on how to set it up....
 // and here we are now
 // Please send help i have no idea why the drawing function is crashing i thought i did everything correctly
+// But i guess I DID NOT do it correctly so now i will try in the future fix this.
+
+// P.S. The old code is down below it all should work.
 
 //
 // // Game Behaviour
