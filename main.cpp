@@ -20,6 +20,7 @@ int main() {
 }
 
 // all right ill just write some comments and commit cuz i got no idea
+// My idea at the start was a simple snake game on the console
 
 //
 // // Game Behaviour
