@@ -19,6 +19,8 @@ int main() {
     return 0;
 }
 
+// all right ill just write some comments and commit cuz i got no idea
+
 //
 // // Game Behaviour
 // bool gameOver;
