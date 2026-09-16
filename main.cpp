@@ -22,7 +22,7 @@ int main() {
 // all right ill just write some comments and commit cuz i got no idea
 // My idea at the start was a simple snake game on the console
 // now i just wanted to remake this code in a program
-//
+// i googled and asked claude and chat ideas, it gave me 2 game making libraries, SDL and Raylib
 
 //
 // // Game Behaviour
