@@ -23,7 +23,9 @@ int main() {
 // My idea at the start was a simple snake game on the console
 // now i just wanted to remake this code in a program
 // i googled and asked claude and chat ideas, it gave me 2 game making libraries, SDL and Raylib
-// I asked  claude on which to choose if i want to port the game to other devices, example, android/ios, PSP (PlayStation Portable).
+// I asked claude on which to choose if i want to port the game to other devices, example, android/ios, PSP (PlayStation Portable).
+// And i decided raylib, since it is easier and offers easier ways to port it to different devices.
+
 
 //
 // // Game Behaviour
