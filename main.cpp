@@ -25,7 +25,8 @@ int main() {
 // i googled and asked claude and chat ideas, it gave me 2 game making libraries, SDL and Raylib
 // I asked claude on which to choose if i want to port the game to other devices, example, android/ios, PSP (PlayStation Portable).
 // And i decided raylib, since it is easier and offers easier ways to port it to different devices.
-// Then i wanted to keep using clion ide and i checked on how to import it....
+// Then i wanted to keep using clion ide and i checked on how to set it up....
+// and here we are now
 
 //
 // // Game Behaviour
