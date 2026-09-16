@@ -27,6 +27,7 @@ int main() {
 // And i decided raylib, since it is easier and offers easier ways to port it to different devices.
 // Then i wanted to keep using clion ide and i checked on how to set it up....
 // and here we are now
+// Please send help i have no idea why the drawing function is crashing i thought i did everything correctly
 
 //
 // // Game Behaviour
