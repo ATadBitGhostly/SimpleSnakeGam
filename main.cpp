@@ -7,7 +7,9 @@
 
 int main() {
     // trying a fixy fix
-    InitWindow(600, 405, "SNAKE GAME");
+    // doing this just for 5 conflicts
+    InitWindow(605, 405, "SNAKE GAME");
+
 
     while (!WindowShouldClose()) {
         BeginDrawing();
