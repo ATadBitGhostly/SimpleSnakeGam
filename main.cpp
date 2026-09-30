@@ -17,6 +17,7 @@ int main() {
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(DARKBLUE);
+        // The mighty have fallen
         EndDrawing();
     }
 
