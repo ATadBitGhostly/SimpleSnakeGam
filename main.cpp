@@ -6,12 +6,13 @@
 #include <raylib.h>
 
 int main() {
-    // doing this just for 5 conflicts
+    // doing this just for 5 conflicts. conf 1
     InitWindow(605, 400, "SNAKE GAME");
 
+    // changing background color. conf 2
     while (!WindowShouldClose()) {
         BeginDrawing();
-        ClearBackground(BLACK);
+        ClearBackground(BROWN);
         EndDrawing();
     }
 
