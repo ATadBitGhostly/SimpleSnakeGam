@@ -18,6 +18,7 @@ int main() {
         BeginDrawing();
         ClearBackground(DARKBLUE);
         // The mighty have fallen
+        // idk lets just say this is conf 4
         EndDrawing();
     }
 
