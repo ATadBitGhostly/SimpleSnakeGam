@@ -9,7 +9,7 @@ int main() {
 
     // trying a fixy fix
     // doing this just for 5 conflicts
-    InitWindow(605, 405, "SNAKE GAME");
+    InitWindow(605, 405, "SNAKE GAME????");
 
     // changing background color. conf 2
     while (!WindowShouldClose()) {
