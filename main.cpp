@@ -16,6 +16,7 @@ int main() {
     // changing background color. conf 2 background color change
     while (!WindowShouldClose()) {
         BeginDrawing();
+        // idk lets just say this is conf 4
         ClearBackground(DARKBLUE);
         EndDrawing();
     }
