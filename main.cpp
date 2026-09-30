@@ -10,10 +10,10 @@ int main() {
     // doing this just for 5 conflicts
     InitWindow(605, 405, "SNAKE GAME");
 
-
+    // test test teset
     while (!WindowShouldClose()) {
         BeginDrawing();
-        ClearBackground(BLACK);
+        ClearBackground(DARKBLUE);
         EndDrawing();
     }
 
