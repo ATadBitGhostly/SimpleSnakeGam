@@ -6,8 +6,8 @@
 #include <raylib.h>
 
 int main() {
-
-    InitWindow(600, 400, "SNAKE GAME");
+    // doing this just for 5 conflicts
+    InitWindow(605, 400, "SNAKE GAME");
 
     while (!WindowShouldClose()) {
         BeginDrawing();
